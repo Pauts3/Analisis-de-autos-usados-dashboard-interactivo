@@ -11,37 +11,36 @@ st.title('Wheel Wonders: Where Every Turn Leads to Your Perfect Pre-Loved Ride')
 
 models_by_year = car_data.groupby('model')['model_year'].unique()
 
-models_by_price = car_data.groupby('model')['price'].mean()
-
 if st.checkbox('Cars models'):
-    st.subheader('Some of our models by year')
+    st.subheader('Some of our models by year:')
     st.write(models_by_year.sample(20))
 
 
 hist_button = st.button("Prices' Histogram")
 
 if hist_button:
-    st.header('Wheel Wonders prices')
+    st.header("Wheel Wonders' prices")
     st.write(
-        'Check out our Wheel Wonders prices')
+        "Check out our Wheel Wonders' prices!")
     fig1 = px.histogram(car_data, x='price', labels={
-        'price': 'USD prices'})
+        'price': 'USD price'})
     st.plotly_chart(fig1)
 
 scatter_button = st.button("Condition Histogram")
 
 if scatter_button:
     st.header('How Pre-loved are the Wheel Wonders')
-    st.write("Check out the cars' condition")
+    st.write(
+        "Compare the conditions of each car depending on the model's year and odometer readings")
     scatter_fig = px.scatter(car_data, x='model_year',
-                             y='odometer', color='condition')
+                             y='odometer', color='condition', labels={'model_year': 'Model year', 'odometer': 'Odometer reading'})
     st.plotly_chart(scatter_fig)
 
-st.header('How Pre-loved are the Wheel Wonders')
+st.header('Get to know a little more about the Wheel Wonders')
 
-st.write("Check out the cars' condition by year")
+st.write("Here is an interactive bar chart to learn more about our pre-loved cars:")
 
-col1, col2 = st.columns([0.15, 0.85])
+col1, col2 = st.columns([0.25, 0.75])
 
 with col1:
     c_axis = st.selectbox('Color:', obj_columns)
