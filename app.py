@@ -31,7 +31,7 @@ scatter_button = st.button("Cars' condition chart")
 if scatter_button:
     st.header('How Pre-loved are the Wheel Wonders')
     st.write(
-        "Compare the conditions of each car depending on the model's year and odometer readings")
+        "Compare the conditions of each car depending on the model's year and odometer readings.")
     fig2 = px.scatter(car_data, x='model_year',
                       y='odometer', color='condition', labels={'model_year': 'Model year', 'odometer': 'Odometer reading'})
     st.plotly_chart(fig2)
