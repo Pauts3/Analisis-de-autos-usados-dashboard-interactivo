@@ -46,5 +46,6 @@ with col1:
     c_axis = st.selectbox('Color:', obj_columns)
 
 with col2:
-    fig3, ax = st.bar_chart(car_data, x='model_year', y='price', color=c_axis)
+    fig3, ax = st.bar_chart(car_data, x='model_year',
+                            y='price', color=c_axis, use_container_width=True)
     st.plotly_chart(fig3)
