@@ -26,7 +26,7 @@ if hist_button:
         'price': 'USD price'})
     st.plotly_chart(fig1)
 
-scatter_button = st.button("Condition Histogram")
+scatter_button = st.button("Cars' condition chart")
 
 if scatter_button:
     st.header('How Pre-loved are the Wheel Wonders')
