@@ -32,9 +32,9 @@ if scatter_button:
     st.header('How Pre-loved are the Wheel Wonders')
     st.write(
         "Compare the conditions of each car depending on the model's year and odometer readings")
-    scatter_fig = px.scatter(car_data, x='model_year',
-                             y='odometer', color='condition', labels={'model_year': 'Model year', 'odometer': 'Odometer reading'})
-    st.plotly_chart(scatter_fig)
+    fig2 = px.scatter(car_data, x='model_year',
+                      y='odometer', color='condition', labels={'model_year': 'Model year', 'odometer': 'Odometer reading'})
+    st.plotly_chart(fig2)
 
 st.header('Get to know a little more about the Wheel Wonders')
 
@@ -46,5 +46,5 @@ with col1:
     c_axis = st.selectbox('Color:', obj_columns)
 
 with col2:
-    fig2, ax = st.bar_chart(car_data, x='model_year', y='price', color=c_axis)
-    st.plotly_chart(fig2)
+    fig3, ax = st.bar_chart(car_data, x='model_year', y='price', color=c_axis)
+    st.plotly_chart(fig3)
