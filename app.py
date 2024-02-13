@@ -3,7 +3,7 @@ import streamlit as st
 import plotly.express as px
 import numpy as np
 
-car_data = pd.read_csv('./notebooks/vehicles_us.csv')
+car_data = pd.read_csv('vehicles_us.csv')
 
 obj_columns = ['model', 'condition', 'fuel', 'transmission', 'type']
 
