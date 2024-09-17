@@ -1,4 +1,4 @@
-# sprint_5_project
+# Análisis de autos usados: dashboard interactivo
 Resolución del proyecto del Sprint 5 de Tripleten.
 
 La aplicación web fue creada para promover la venta de carros usados de Wheel Wonders. Entrando al aplicativo podremos ver los siguientes datos o estadísticas:
