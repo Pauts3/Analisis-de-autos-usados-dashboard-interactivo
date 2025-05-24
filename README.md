@@ -12,4 +12,4 @@ La aplicación web fue creada para promover la venta de carros usados de Wheel W
 
 Finalmente, la aplicación web cuenta con un gráfico interactivo para evidenciar las condiciones de los vehículos según su precio y año. Algunas de estas condiones son: modelo, transmisión, tipo de combustible, entre otros. 
 
-URL del ployecto en Render: https://wheel-wonders-project-5.onrender.com
+
